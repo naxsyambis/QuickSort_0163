@@ -51,12 +51,22 @@ void q_sort(int low, int high)
     j = high; // step 4
 
     while (i <= j) // step 10
+    {
         // mencari elemen yang lebih besar dari pivot tersebut
         while ((arr[i] <= pivot) && (j >= low)) // step 7
         {
             i++; // step 6
             cmp_count++;
         }
+        cmp_count++;
+		// mencari elemen yang kurang dari atau sama dengan pivot
+		while ((arr[j] > pivot) && (j >= low)) //step 7
+		{
+			j--; // step 8
+			cmp_count++;
+		}
+
+
 
 int main()
 {
